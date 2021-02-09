@@ -11,3 +11,17 @@
 	editor = vim
 [color]
 	ui = always
+  [color "branch"]
+    current = green reverse
+    local = yellow
+    remote = blue
+  [color "diff"]
+    meta = yellow
+    frag = cyan
+    old = red
+    new = green
+    whitespace = red reverse
+  [color "status"]
+    added = green
+    changed = yellow
+    untracked = red
