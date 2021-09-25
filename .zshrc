@@ -10,6 +10,5 @@ RPROMPT="%F{244}\$vcs_info_msg_0_ %K{000}%*"
 zstyle ':vcs_info:git:*' formats '(%b)'
 zstyle ':vcs_info:*' enable git
 
-
-autoload -Uz compinit && compinit -i
-source <(kubectl completion zsh)
+# autoload -Uz compinit && compinit -i
+# source <(kubectl completion zsh)
