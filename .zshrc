@@ -21,9 +21,5 @@ zstyle ':vcs_info:*' enable git
 # PROMPT='$(kube_ps1)'$PROMPT
 
 source <(kubectl completion zsh)
-echo 'alias k=kubectl' >>~/.zshrc
-echo 'complete -F __start_kubectl k' >>~/.zshrc
-alias k=kubectl
-complete -F __start_kubectl k
 alias k=kubectl
 complete -F __start_kubectl k
