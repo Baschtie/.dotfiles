@@ -1,3 +1,5 @@
+autoload -Uz compinit
+compinit
 # autoload -U colors && colors
 # PS1="%(?.%F{green}•.%F{red}•) %F{blue}%n%F{white} %F{yellow}%~ %F{244}%# %F{015}"
 PS1="%(?.%F{green}•.%F{red}•) %F{yellow}%~ %F{244}%# %F{015}"
@@ -18,5 +20,10 @@ zstyle ':vcs_info:*' enable git
 # KUBE_PS1_NS_COLOR=blue
 # PROMPT='$(kube_ps1)'$PROMPT
 
-# autoload -Uz compinit && compinit -i
-# source <(kubectl completion zsh)
+source <(kubectl completion zsh)
+echo 'alias k=kubectl' >>~/.zshrc
+echo 'complete -F __start_kubectl k' >>~/.zshrc
+alias k=kubectl
+complete -F __start_kubectl k
+alias k=kubectl
+complete -F __start_kubectl k
