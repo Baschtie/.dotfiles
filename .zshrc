@@ -10,5 +10,13 @@ RPROMPT="%F{244}\$vcs_info_msg_0_ %K{000}%*"
 zstyle ':vcs_info:git:*' formats '(%b)'
 zstyle ':vcs_info:*' enable git
 
+# source ~/.zsh/plugins/kube-ps1.sh
+# KUBE_PS1_PREFIX=""
+# KUBE_PS1_SEPARATOR=""
+# KUBE_PS1_SUFFIX=" "
+# KUBE_PS1_CTX_COLOR=cyan
+# KUBE_PS1_NS_COLOR=blue
+# PROMPT='$(kube_ps1)'$PROMPT
+
 # autoload -Uz compinit && compinit -i
 # source <(kubectl completion zsh)
