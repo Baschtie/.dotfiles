@@ -26,3 +26,6 @@ compdef __start_kubectl k
 
 #Gradle
 export PATH=/usr/local/bin/gradle-7.3/bin:$PATH
+
+#measure command time (history -D)
+setopt inc_append_history_time
