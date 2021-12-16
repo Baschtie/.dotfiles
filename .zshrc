@@ -22,4 +22,7 @@ zstyle ':vcs_info:*' enable git
 
 source <(kubectl completion zsh)
 alias k=kubectl
-complete -F __start_kubectl k
+compdef __start_kubectl k
+
+#Gradle
+export PATH=/usr/local/bin/gradle-7.3/bin:$PATH
