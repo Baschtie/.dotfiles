@@ -8,7 +8,8 @@ autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
-RPROMPT="%F{244}\$vcs_info_msg_0_ %*%K{reset_colors}"
+RIGHT_SIDE="%F{244}\$vcs_info_msg_0_ %*%K{reset_colors}"
+RPROMPT="$RIGHT_SIDE"
 zstyle ':vcs_info:git:*' formats '(%b)'
 zstyle ':vcs_info:*' enable git
 
@@ -29,3 +30,19 @@ export PATH=/usr/local/bin/gradle-7.3/bin:$PATH
 
 #measure command time (history -D)
 setopt inc_append_history_time
+
+function preexec() {
+  timer=${timer:-$SECONDS}
+}
+
+function precmd() {
+  if [ $timer ]; then
+    timer_show=$(($SECONDS - $timer))
+    if (($timer_show > 0)); then
+        export RPROMPT="$RIGHT_SIDE%F{244} [${timer_show}s]%{$reset_color%}"
+    else
+        export RPROMPT="$RIGHT_SIDE"
+    fi
+    unset timer
+  fi
+}
