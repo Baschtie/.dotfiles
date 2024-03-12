@@ -1,7 +1,15 @@
 {
-    "workbench.colorTheme": "Default Dark+",
     "editor.fontSize": 16,
     "terminal.external.osxExec": "iterm.app",
     "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.fontSize": 16
+    "terminal.integrated.fontSize": 16,
+    "redhat.telemetry.enabled": false,
+    "window.autoDetectColorScheme": true,
+    "files.trimTrailingWhitespace": true,
+    "go.toolsManagement.autoUpdate": true,
+    "cSpell.language": "en,de",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.colorTheme": "Default Light Modern"
 }
